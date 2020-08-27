@@ -43,6 +43,7 @@ namespace ELVService.Controllers
         [Route("getelevrunbyelevatorid/{elevid}")]
         public dynamic GetElevRunByElevatorId(Guid elevid)
         {
+            string a = "xcv";
             string guidstr = elevid.ToString().ToUpper();
             var ret = _context.Elevatorruntime.Where(x => x.ElevatorId.ToUpper().Equals(elevid.ToString().ToUpper())).ToList();
             return ret;
